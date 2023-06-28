@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+  
+</head>
+<body>
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+
+    <!-- поле календаря -->
+    <!-- Подключение библиотеки jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Подключение библиотеки jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+
+    <script>
+        // Инициализация Datepicker на поле ввода с идентификатором "datepickerField"
+        $(function () {
+            $("#datepickerField").datepicker();
+        });
+    </script>
+    <!-- конец поля календаря -->
+
+
+    <!-- поле выбора года -->
+    <link href="~/lib/select2/select2.min.css" rel="stylesheet" />
+    <script src="~/lib/select2/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#yearPicker').select2({
+                data: [
+        @for (int year = 2000; year <= 3000; year++)
+        {
+            @:{ id: '@year', text: '@year' },
+        }
+                    ],
+                placeholder: 'Введите год',
+                minimumInputLength: 1
+            });
+        });
+    </script>
+    <!-- конец поля выбора года -->
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

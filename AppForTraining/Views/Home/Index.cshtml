@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Заявка на ...";
+}
+
+<div class="container">
+    <div class="row mb-4 mt-2">
+        <div class="col-md-4">
+            <label for="inputField">ФИО</label>
+            <input type="text" class="form-control" id="inputField" placeholder="Введите значение">
+        </div>
+        <div class="col-md-4">
+            <label for="inputField">Наименование курса</label>
+            <textarea class="form-control" id="textareaField" rows="1" placeholder="Введите текст"></textarea>
+        </div>
+        <div class="col-md-4">
+            <label for="inputField">Статус</label>
+            <select class="form-control" id="selectField">
+                <option value="1">Заявлен на обучение</option>
+                <option value="2">Курс пройден</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="inputField">Отдел</label>
+            <input type="text" class="form-control" id="inputField" placeholder="Введите значение">
+        </div>
+        <div class="col-md-4">
+            <label for="selectField">Тип курса</label>
+            <select class="form-control" id="selectField">
+                <option value="1">Базовый</option>
+                <option value="2">Продвинутый</option>
+                <option value="3">Для администраторов</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="eventDate">Период проведения курса</label>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="startDate" placeholder="от">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="endDate" placeholder="до">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="inputField">Должность</label>
+            <input type="text" class="form-control" id="inputField" placeholder="Введите значение">
+        </div>
+        <div class="col-md-4">
+            <label for="inputField">Примечание</label>
+            <textarea class="form-control" id="textareaField" rows="1" placeholder="Введите текст"></textarea>
+        </div>
+        <div class="col-md-4">
+            <label for="inputField">Год</label>
+            <select class="form-control form-control-height" id="yearPicker" name="yearPicker"></select>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <input type="text" class="form-control" id="datepickerField" placeholder="Выберите дату">
+    </div>
+</div>
+
+@*<select class="form-control" id="yearPicker" name="yearPicker">
+    @for (int year = 2000; year <= 2100; year++)
+    {
+        <option value="@year">@year</option>
+    }
+</select>*@
+
+
+
+
+
+
