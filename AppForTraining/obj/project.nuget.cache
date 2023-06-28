@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "246SeWnNTzCGxVN7OyzCCzICTYTqqGG9THpMczFFo/eImXHfq0EVa7IsJ4M7AF27O3U6N/goWuPWzDDX4s8qVA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lokot\\Desktop\\AppForTraining\\AppForTraining\\AppForTraining.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lokot\\.nuget\\packages\\jquery\\1.7.0\\jquery.1.7.0.nupkg.sha512",
+    "C:\\Users\\lokot\\.nuget\\packages\\select2.js\\4.0.13\\select2.js.4.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
